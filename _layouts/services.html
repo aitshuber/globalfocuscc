@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+ {% include head.html %}
+ {% seo %}
+<body>
+
+<div id="root">
+  <div id="top">
+      <div class="top-inner">
+          <h1 id="logo"><a href="/"><img alt="" src="/static/images/logo.png"/></a></h1>
+          <ul id="skip-links">
+              <li><a accesskey="n" href="#main-%20nav">Skip to navigation [n]</a></li>
+              <li><a accesskey="c" href="#content">Skip to content [c]</a></li>
+              <li><a accesskey="f" href="#footer">Skip to footer [f]</a></li>
+          </ul>
+          <h2 class="offset">Navigation</h2>
+          <!-- Main Nav -->
+          <div id="main-nav">
+              <ul id="nav_main">
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/services/pre-construction.html">Services</a></li>
+                  <li><a href="/Training.html">Training</a></li>
+                  <li><a href="/about.html">About Us</a></li>
+                  <li><a href="/contact.html">Contact</a></li>
+              </ul>
+              <script type="text/javascript">catSetSelectedCSSItem('nav_main');</script>
+          </div>
+          <!-- // Main Nav -->
+          
+          <div class="clearall"></div>
+      </div>
+  </div>
+  <!-- #top -->
+  <div id="content">
+    <div class="cols-a">
+    <div class="primary-a">
+   {{ content }}
+    </div>
+   <!-- .primary-a -->
+   <div class="secondary-a">
+   
+       <div class="aside-a">
+   
+           <div class="subnav-a">
+               <!-- side nav -->
+               <div id="subnav-a">
+                   <ul id="side-nav">
+                       <li><a href="pre-construction.html">Change Management</a></li>
+                       <li><a href="commercial-tenant-improvement.html">Critical Chain Project Management</a>
+                       </li>
+                       <li><a href="framing-and-drywall.html">TOC Thinking Process</a></li>
+                       <li><a href="construction-management.html">Production Scheduling</a></li>
+                       <li><a href="design-and-build.html">Corporate Strategy</a></li>
+                       <li><a href="general-contracting.html">Sales and Marketing</a></li>
+                       <li><a href="services-overview.html">Management Training</a></li>
+                       <li><a href="supply-chain.html">Supply Chain</a></li>
+                   </ul>
+                   <script type="text/javascript">catSetSelectedCSSItem('side-nav');</script>
+               </div>
+               <!-- // side nav -->
+           </div>
+   
+       </div>
+   
+       <div class="aside-b">
+           <!-- callout -->
+           <!-- // callout -->
+       </div>
+   </div>
+   <!-- .secondary-a -->
+  </div>
+</div>
+</div>
+  <!-- footer -->
+  {% include footer.html %}
+  <!-- End Footer -->
+</body>
+</html>
