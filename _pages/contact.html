@@ -16,7 +16,7 @@ permalink: contact
                 <p class="js-form-success">Thank you for Contacting us!</p>
                 <!-- END - Form Success Message -->
 
-                <form method="post" action="/success" id="contact-form">
+                <form method="post" action="/success" id="global-focus">
 
                     <!-- START - Form Alert Message -->
                     <p class="js-form-alert">This will be the alert message</p>
@@ -81,7 +81,7 @@ permalink: contact
                         <div>
                             <br/>
                             <p>
-                              <input type="hidden" name="inbox_key" value="all-around-contact" />
+                              <input type="hidden" name="inbox_key" value="global-focus" />
                               <input type="hidden" name="_to" value="carlos@accoladesit.com" />
                               <input type="text" name="_gotcha" style="display: none;" />
                                 <input class="submit" type="submit" value="Get In Touch" />
@@ -89,41 +89,5 @@ permalink: contact
                         </div>
                     </div>
                 </form>
-                <script>
-                    function submitContactForm(event) {
-                        var form = new FormData(document.getElementById('contact-form'));
-                        $.ajax({
-                            headers: {'X-CSRFTOken': 'IfBXPHWHE5trK3bCxaZsFykwpJBONI0zH33wdL2xMLYteRgMr39DjUGhDsQFCkNW'},
-                            enctype: 'multipart/form-data',
-                            url: '/contact',
-                            contentType: false,
-                            processData: false,
-                            type: 'POST',
-                            data: form,
-                            success: function (result) {
-                                if (result.status === 200) {
-                                    Swal.fire("Form Submitted!", "Your message has been sent to us", "success")
-                                } else {
-                                    let errors = ""
-                                    for (var i = 0; i < result.errors.length; i++) {
-                                        errors += `<li>${result.errors[i]}</li>`;
-                                    }
-                                    Swal.fire({
-                                        "icon": "warning",
-                                        "title": "Invalid Form",
-                                        "html": `These fields are either invalid or blank: <ul>${errors}<ul>`
-                                    });
-                                }
-                            }
-                            ,
-                            error: function (err) {
-                                Swal.fire({
-                                    icon: "error",
-                                    title: "Form Submission Failure",
-                                    html: "Something went wrong, please try again later"
-                                })
-                            }
-                        })
-                    }
-                </script>
+ 
 
